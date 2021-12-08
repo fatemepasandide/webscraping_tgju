@@ -7,13 +7,9 @@ Created on Sat Aug 15 09:30:52 2020
 
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
-import csv
 import xlsxwriter
 from xlsxwriter.utility import xl_rowcol_to_cell
-from openpyxl.styles import colors
-from openpyxl.styles import Font, Color
-from openpyxl import Workbook
+
 
 
 data=[]
