@@ -27,28 +27,28 @@ for i in URL_list:
     job_elems = results.find_all(class_='title')
     
     box_roozane = results.find('div', class_='tgju-widgets-block col-md-12 col-lg-4 tgju-widgets-block-bottom-unset overview-first-block')#amalkard hafte
-    for elem2 in box_roozane: # peyda kardan span ha
+    for elem2 in box_roozane: # finding spans
         td_box = box_roozane.find_all('td')
     
-    for i in range(0,18):# 2 elemnte aval ra entekhab mikonim
+    for i in range(0,18):# choosing 2 first elements
         if i==1 or i==17:
             temp = td_box[i].text
             data.append(temp)
         
-    for elem2 in box_roozane: #peyda kardan class marboot be darsad rooze gozashte
+    for elem2 in box_roozane: #Find class related to the percentage of last two days
         span_box_from_td_box = box_roozane.find_all('span')
     
-    day_color.append(span_box_from_td_box[5].get('class')) #low ya high ya "" boodan
+    day_color.append(span_box_from_td_box[5].get('class')) #low or high ya "" without
     
             
     box_amalkard = results.find('div', class_='tgju-widgets-block col-12 col-md-12 col-lg-6 profile-performance-box')#amalkard hafte
-    for elem1 in box_amalkard: # peyda kardan span ha
+    for elem1 in box_amalkard: # finding spans
         span_box = box_amalkard.find_all('span')
     
-    for i in range(0,2):# 2 elemnte aval ra entekhab mikonim
+    for i in range(0,2):# choosing 2 first elements
         temp = span_box[i].text
         data.append(temp)
-        week_color.append(span_box[i].get('class')) # low ya high boodan class ra baraye entekhab rang migirim
+        week_color.append(span_box[i].get('class')) # be low or high class to choose color
 
 
 
@@ -166,7 +166,7 @@ for row, row_data in enumerate(sep_data):
     worksheet.write_row(row + 1, 1, row_data)
 
 
-if gheymat_taghir_ons=='red': #taghir ons be rooz
+if gheymat_taghir_ons=='red': #Change the price of auns up to date
     worksheet.write(1, 2,sep_data[0][1],red)
 elif gheymat_taghir_ons == 'green':
     worksheet.write(1,2,sep_data[0][1],green)
@@ -174,7 +174,7 @@ else :
     worksheet.write(1,2,sep_data[0][1])
     
 
-if gheymat_taghir_sekke =='red': #taghir sekke be rooz
+if gheymat_taghir_sekke =='red': #Change the price of coins up to date
     worksheet.write(2, 2,sep_data[1][1],red)
 elif gheymat_taghir_sekke == 'green':
     worksheet.write(2,2,sep_data[1][1],green)
@@ -182,7 +182,7 @@ else :
     worksheet.write(2,2,sep_data[1][1])
     
 
-if gheymat_taghir_gerami =='red': #taghir tala be rooz
+if gheymat_taghir_gerami =='red': #Change the price of gold up to date
     worksheet.write(3, 2,sep_data[2][1],red)
 elif gheymat_taghir_gerami == 'green':
     worksheet.write(3,2,sep_data[2][1],green)
@@ -190,7 +190,7 @@ else :
     worksheet.write(3,2,sep_data[2][1])
     
 
-if gheymat_taghir_dollar=='red': #taghir dollar be rooz
+if gheymat_taghir_dollar=='red': #Change the price of doller up to date
     worksheet.write(4, 2,sep_data[3][1],red)
 elif gheymat_taghir_dollar == 'green':
     worksheet.write(4,2,sep_data[3][1],green)
@@ -199,7 +199,7 @@ else :
 
 
 
-if gheymat_taghir_ons_hafte=='red': #taghir ons be hafte
+if gheymat_taghir_ons_hafte=='red': #Changing the price of Auns per week
     worksheet.write(1, 3,sep_data[0][2],red)
     worksheet.write(1, 4,sep_data[0][3],red)
 
@@ -212,7 +212,7 @@ else :
     worksheet.write(1, 4,sep_data[0][3])
  
     
-if gheymat_taghir_sekke_hafte=='red': #taghir sekke be hafte
+if gheymat_taghir_sekke_hafte=='red': #Changing the price of coins per week
     worksheet.write(2, 3,sep_data[1][2],red)
     worksheet.write(2,4,sep_data[1][3],red)
 
@@ -225,7 +225,7 @@ else :
     worksheet.write(2, 4,sep_data[1][3])
   
     
-if gheymat_taghir_gerami_hafte=='red': #taghir talla hafte
+if gheymat_taghir_gerami_hafte=='red': #Changing the price of gold per week
     worksheet.write(3, 3,sep_data[2][2],red)
     worksheet.write(3, 4,sep_data[2][3],red)
 
@@ -238,7 +238,7 @@ else :
     worksheet.write(3, 4,sep_data[2][3])
 
     
-if gheymat_taghir_dollar_hafte=='red': #taghir dollar hafte
+if gheymat_taghir_dollar_hafte=='red': #Changing the price of doller per week
     worksheet.write(4, 3,sep_data[3][2],red)
     worksheet.write(4, 4,sep_data[3][3],red)
 
