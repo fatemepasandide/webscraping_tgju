@@ -38,7 +38,7 @@ for i in URL_list:
     for elem2 in box_roozane: #Find class related to the percentage of last two days
         span_box_from_td_box = box_roozane.find_all('span')
     
-    day_color.append(span_box_from_td_box[5].get('class')) #low or high ya "" without
+    day_color.append(span_box_from_td_box[5].get('class')) #low or high or "" without
     
             
     box_amalkard = results.find('div', class_='tgju-widgets-block col-12 col-md-12 col-lg-6 profile-performance-box')#amalkard hafte
