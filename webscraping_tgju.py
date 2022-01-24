@@ -26,7 +26,7 @@ for i in URL_list:
     results = soup.find(id='main')
     job_elems = results.find_all(class_='title')
     
-    box_roozane = results.find('div', class_='tgju-widgets-block col-md-12 col-lg-4 tgju-widgets-block-bottom-unset overview-first-block')#amalkard hafte
+    box_roozane = results.find('div', class_='tgju-widgets-block col-md-12 col-lg-4 tgju-widgets-block-bottom-unset overview-first-block')#Weekly performance
     for elem2 in box_roozane: # finding spans
         td_box = box_roozane.find_all('td')
     
@@ -38,7 +38,7 @@ for i in URL_list:
     for elem2 in box_roozane: #Find class related to the percentage of last two days
         span_box_from_td_box = box_roozane.find_all('span')
     
-    day_color.append(span_box_from_td_box[5].get('class')) #low or high or "" without
+    day_color.append(span_box_from_td_box[5].get('class')) #low or high or or without..
     
             
     box_amalkard = results.find('div', class_='tgju-widgets-block col-12 col-md-12 col-lg-6 profile-performance-box')#amalkard hafte
