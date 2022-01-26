@@ -4,19 +4,11 @@
 This code was written for finding data from "https://www.tgju.org" and saving data to "price.xlsx".
 
 ### How use the code?
-First of all install <a href="https://www.python.org/downloads/">python</a>.
 
 
-after that,
-install this packages:
- ```sh
- pip install requests
- ```
- ```sh
-pip install beautifulsoup4
- ```
- ```sh
- pip install xlsxwriter
- ```
+Clone this repository into a folder on your computer
+Download <a href="https://www.python.org/downloads/">Python</a>.
+Open terminal inside the folder with code.
+Type pip install -r requirements.txt in the terminal window to install all the requirements to run the app.
 
 run and enjoy :yum:
