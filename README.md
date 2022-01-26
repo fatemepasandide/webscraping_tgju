@@ -6,9 +6,9 @@ This code was written for finding data from "https://www.tgju.org" and saving da
 ### How use the code?
 
 
-Clone this repository into a folder on your computer
-Download <a href="https://www.python.org/downloads/">Python</a>.
-Open terminal inside the folder with code.
-Type pip install -r requirements.txt in the terminal window to install all the requirements to run the app.
+- Clone this repository into a folder on your computer
+- Download <a href="https://www.python.org/downloads/">Python</a>.
+- Open terminal inside the folder with code.
+- Type pip install -r requirements.txt in the terminal window to install all the requirements to run the app.
 
 run and enjoy :yum:
