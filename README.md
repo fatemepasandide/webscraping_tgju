@@ -8,7 +8,7 @@ First of all install <a href="https://www.python.org/downloads/">python</a>.
 
 
 after that,
-install this pakages:
+install this packages:
  ```sh
  pip install requests
  ```
