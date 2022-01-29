@@ -15,4 +15,4 @@ This code was written for finding data from "https://www.tgju.org" and saving da
 pip install -r requirements.txt 
  ```
 
-run and enjoy :yum:
+run and check numbers in "price.xlsx".
